@@ -1,0 +1,34 @@
+<!DOCTYPE html> <html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Назва сторінки</title>
+</head>
+<body>
+    <script>
+        let age = 15;
+        let withParents = false;
+
+       /* let accessAllowed = ( age > 18 ) ? 'Yes1' : ( withParents ? 'Yes2' : 'No' );
+
+        console.info( accessAllowed );*/
+
+        let accessAllowed;
+        if (age > 18 ) {
+            accessAllowed = 'Yes1';
+        }
+        else{
+            if (withParents)
+            {
+                accessAllowed = 'Yes2';
+            }
+            else {
+                accessAllowed = 'No'
+            }
+        }
+
+        console.info( accessAllowed );
+    </script>
+
+</body>
+</html>
+

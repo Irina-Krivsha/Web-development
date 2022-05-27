@@ -1,0 +1,20 @@
+<!DOCTYPE html> <html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>6.4*</title>
+</head>
+<body>
+    <script>
+        let age = 15;
+        let withParents = true;
+        // let accessAllowed = ( age > 18 ) ? 'Yes' : ( withParents ? 'Yes' : 'No' );
+        let accessAllowed = 'No';
+        if (age > 18 || withParents)
+        {
+            accessAllowed = 'Yes';
+        }
+        console.log( 'accessAllowed = ' + accessAllowed );
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html> <html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Назва сторінки</title>
+</head>
+<body>
+    <script>
+        let min = 100;
+        let max = 80;
+        function getRandomInt(min, max)
+        {
+            if (min > max)
+            {
+                min = min + max;
+                max = min - max;
+                min = min - max;
+            }
+            return Math.floor(Math.random ()*(max-min)+min);
+        }
+        let randomInt = getRandomInt(min, max);
+        console.log('Випадкове число:' + randomInt );
+    </script>
+
+</body>
+</html>
+
