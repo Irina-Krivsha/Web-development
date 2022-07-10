@@ -1,0 +1,14 @@
+CREATE TYPE gender AS ENUM ( 'male', 'female', 'other' );
+
+CREATE TABLE users (
+id          SERIAL PRIMARY KEY,
+lastname    varchar(64)     NOT NUll,
+firstname   varchar(64)     NOT NUll,
+birthday    date            NOT NUll,
+email       varchar(64)     NOT NUll UNIQUE,
+phone       varchar(13)     NOT NUll UNIQUE,
+gender      gender          NOT NUll,
+time_zone   varchar(30)     NOT NUll,
+registration timestamp      NOT NUll,
+ip_address   cidr           NOT NUll
+);

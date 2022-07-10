@@ -1,0 +1,15 @@
+CREATE TABLE users (
+id          int             auto_increment,
+lastname    varchar(64)     not null,
+firstname   varchar(64)     not null,
+birthday    date            not null,
+email       varchar(64)     not null,
+phone       varchar(13)     not null,
+gender      ENUM( "male", "female", "other" ) not null,
+timezone    varchar(30)     not null,
+registration datetime       not null,
+ipaddress  varchar(15)      not null,
+UNIQUE (email),
+UNIQUE (phone),
+PRIMARY KEY (id)
+);
