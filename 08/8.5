@@ -1,0 +1,14 @@
+SELECT
+    ci.id AS city_id,
+    ci.name AS city_name,
+    co.name AS country_name,
+    con.name AS continent_name
+FROM
+    cities AS ci
+LEFT JOIN
+    countries AS co on (ci.country_id = co.id)
+LEFT JOIN
+    continents AS con on (ci.continent_id = con.id)
+ORDER BY  CHAR_LENGTH (ci.name) DESC
+
+LIMIT 10;
