@@ -9,7 +9,10 @@ gender          ENUM( "male", "female", "other" ) not null,
 timezone        varchar(30)     not null,
 registration    datetime       not null,
 ipaddress       varchar(15)      not null,
-UNIQUE (email),
+UNIQUE  LOWER(email),
 UNIQUE (phone),
 PRIMARY KEY (id)
 );
+
+
+
