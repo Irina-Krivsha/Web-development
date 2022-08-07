@@ -9,6 +9,9 @@ email           varchar(64)     NOT NUll UNIQUE,
 phone           varchar(13)     NOT NUll UNIQUE,
 gender          gender          NOT NUll,
 time_zone       varchar(30)     NOT NUll,
-registration    timestamp      NOT NUll,
-ip_address      cidr           NOT NUll
+registration    timestamp       NOT NUll,
+ip_address      cidr            NOT NUll,
+UNIQUE  LOWER(email),
+UNIQUE (phone),
+PRIMARY KEY (id)
 );
